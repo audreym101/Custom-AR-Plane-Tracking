@@ -9,7 +9,7 @@ public class PlacementIndicator : MonoBehaviour
 
     private ARRaycastManager raycastManager;
     private ARPlaneManager planeManager;
-    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     public bool IsActive { get; private set; }
     public Pose CurrentPose { get; private set; }
@@ -23,6 +23,7 @@ public class PlacementIndicator : MonoBehaviour
 
     void Update()
     {
+        if (raycastManager == null) return;
         Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
         bool hit = raycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinPolygon);
 
@@ -46,10 +47,7 @@ public class PlacementIndicator : MonoBehaviour
 
         // Stop plane detection and hide ALL planes
         if (planeManager != null)
-        {
-            planeManager.enabled = false;
             SetAllPlanesActive(false);
-        }
     }
 
     public void SetAllPlanesActive(bool active)

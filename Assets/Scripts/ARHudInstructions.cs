@@ -7,15 +7,25 @@ public class ARHudInstructions : MonoBehaviour
     [SerializeField] private PlacementIndicator placementIndicator;
     [SerializeField] private PlaceObjectOnPlane placer;
 
+    private string lastText;
+
     void Update()
     {
         if (hudText == null) return;
 
+        string next;
         if (placer.HasSpawned)
-            hudText.text = "Drag to move • Pinch to scale • Twist to rotate";
+            next = "Drag to move \u2022 Pinch to scale \u2022 Twist to rotate";
         else if (placementIndicator.IsActive)
-            hudText.text = "Tap to place object";
+            next = "Tap to place object";
         else
-            hudText.text = "Point camera at a flat surface...";
+            next = "Point camera at a flat surface...";
+
+        if (next == lastText) return;
+        lastText = next;
+        hudText.text = next;
+
+        if (placer.HasSpawned)
+            enabled = false;
     }
 }

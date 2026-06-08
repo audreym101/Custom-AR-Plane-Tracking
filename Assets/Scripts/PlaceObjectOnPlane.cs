@@ -15,7 +15,7 @@ public class PlaceObjectOnPlane : MonoBehaviour
 
     private ARRaycastManager raycastManager;
     private PlaneVisibilityController planeVisibility;
-    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void Start()
     {
@@ -53,6 +53,7 @@ public class PlaceObjectOnPlane : MonoBehaviour
         if (!hitPlane) return;
 
         HasSpawned = true;
+        enabled = false;
         Vector3 spawnPos = hits[0].pose.position + new Vector3(0, 0.15f, 0);
         Debug.Log("Spawning at: " + spawnPos);
 
