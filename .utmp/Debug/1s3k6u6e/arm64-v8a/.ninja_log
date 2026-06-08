@@ -1,0 +1,10 @@
+# ninja log v5
+359	4483	8026540423117686	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	20dcff2ef11f323e
+186	4582	8026540423238620	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	81f03f8ac88e50f5
+1	4749	8026540426041176	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	b23bfab54899e12a
+688	5996	8026540438256473	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	3a54d2a9fc2a15ea
+513	6215	8026540440539312	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	10da50469cd029c9
+849	6963	8026540448387169	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d41c742797ba44f3
+1021	7442	8026540453304357	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	3f5a99fc75e44e50
+1597	7631	8026540455159125	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	52e16732ebfdedae
+7632	8312	8026540460968745	C:/Users/rugam/Audrey/CustomARPlaneTracking_Audrey/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/1s3k6u6e/obj/arm64-v8a/libgame.so	be7e5e6261555e9e
