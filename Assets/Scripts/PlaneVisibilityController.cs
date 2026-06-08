@@ -26,18 +26,14 @@ public class PlaneVisibilityController : MonoBehaviour
 
     void OnPlanesChanged(ARTrackablesChangedEventArgs<ARPlane> args)
     {
-        if (!hideAll) return;
-
         foreach (var plane in args.added)
-            plane.gameObject.SetActive(false);
-        foreach (var plane in args.updated)
             plane.gameObject.SetActive(false);
     }
 
     public void HideAllPlanes()
     {
-        hideAll = true;
         if (planeManager == null) return;
+        planeManager.trackablesChanged.RemoveListener(OnPlanesChanged);
         planeManager.enabled = false;
         foreach (var plane in planeManager.trackables)
             plane.gameObject.SetActive(false);

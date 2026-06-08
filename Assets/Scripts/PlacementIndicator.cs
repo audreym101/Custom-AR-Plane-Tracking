@@ -44,10 +44,6 @@ public class PlacementIndicator : MonoBehaviour
         IsActive = false;
         indicatorVisual.SetActive(false);
         enabled = false;
-
-        // Stop plane detection and hide ALL planes
-        if (planeManager != null)
-            SetAllPlanesActive(false);
     }
 
     public void SetAllPlanesActive(bool active)
